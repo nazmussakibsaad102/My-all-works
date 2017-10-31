@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+<style>
+/* Computer Screen */
+@media only screen and (max-width:1366px) and (min-width:900px)
+{
+ body{color:blue;}
+.header{  width:100%;  }
+.left_nav{    width:25%; float:left;   }
+.center_block{  width:50%; float:left; }
+.right_bar{  width:25%;  float:left;  height:200px;overflow:auto;}
+.footer{ width:100%; }
+}
+
+/* Tablet Screen */
+@media only screen and (max-width:899px) and (min-width:600px)
+{
+ body{color:black;}
+.header{  width:100%;  }
+.left_nav{    width:50%; float:left;   }
+.center_block{  width:50%; float:left; }
+.right_bar{  width:100%;  float:left;  }
+.footer{ width:100%; }
+}
+
+/* Mobile Screen */
+@media only screen and (max-width:599x) 
+{
+ body{color:black;}
+.header{  width:100%;  }
+.left_nav{    width:100%; float:left;   }
+.center_block{  width:100%; float:left; }
+.right_bar{  width:100%;  float:left;  }
+.footer{ width:100%; }
+}
+
+/* Printing Screen */
+@media only print and (max-width:700px)
+{
+ body{color:red;}
+.header{  width:100%;  }
+.left_nav{    width:25%; float:left;   }
+.center_block{  width:50%; float:left; }
+.right_bar{  width:25%;  float:left;  }
+.footer{ width:100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Header</h1>
+    <p>Header, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look</p>
+</div>
+<div></div>
+
+		<div class="left_nav">
+		  <ul >
+			<li>Nav Item 1</li>
+			<li>Nav Item 2</li>
+			<li>Nav Item 3</li>
+			<li>Nav Item 4</li>
+		  </ul>
+		</div>
+
+		<div class="center_block">
+		  <h1>Data</h1>
+		  <p>On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.</p>
+		</div>
+
+		<div class="right_bar">
+			<h2>What?</h2>
+			<p>the galleries include items that are designed to coordinate with the overall look of your document.</p>
+			<h2>Where?</h2>
+			<p>the galleries include items that are designed to coordinate with the overall look of your document.</p>
+			<h2>How?</h2>
+			<p>the galleries include items that are designed to coordinate with the overall look of your document.</p>
+		</div>
+
+<div class="footer">
+	<h1>footer</h1>
+  <p>footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look</p>
+</div>
+</body>
+</html>

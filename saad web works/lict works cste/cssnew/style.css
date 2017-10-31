@@ -1,0 +1,20 @@
+.div1{
+	width: 25%;
+	background-color: blue;
+	float: left;
+}
+.div11{
+	background-color: black;
+	width: 50%;
+	float: left;
+}
+.div12{
+	background-color: blue;
+	float: left;
+	width: 25%;
+}
+.div13{
+	background-color: black;
+	float: left;
+	width: 25%;
+}

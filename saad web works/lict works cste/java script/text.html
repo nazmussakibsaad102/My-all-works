@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+.div {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+	.Div_Box{
+		width: 100px;height:100px;background-color: red;
+		 float: left;
+		margin-right: 5px;
+	}
+	.newBox{
+		background-color: red;float: left;
+		margin-right: 5px;
+
+	}
+</style>
+
+	<title>My first web page</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script  src="script.js"></script>
+
+
+<button type="button" id="new" onclick="again()"> switch</button>
+<button type="button" onclick="this.innerHTML=Date()"> date</button>
+<label>number1:</label><input id="first_name" type="number" name="">
+<label>number2:</label><input id="last_name" type="number" name="">
+	<legend>fullname</legend>
+	<button id="sum" onclick="sum()">sum</button> 
+	<button id="sub" onclick="sub()">sub</button> 
+	<button id="mul" onclick="mul()">mul</button> 
+	<button id="div" onclick="div()">div</button>
+<fieldset style="width: 30%;">
+	<p id="ans"></p>
+</fieldset>
+
+
+<label>Input an operation:</label><input id="operation" type="text" name="">
+
+
+<button onclick="operation()">answer</button>
+
+<button type="button" id="new1" onclick="alt()"> alert</button>
+
+
+
+
+//আজকের ক্লাস 
+
+
+<fieldset id="target">
+<legend>Boxes</legend>
+<div class="Div_Box""></div>
+</fieldset >
+<input id="box" type="Button" onclick="adding_box()" value="create new boxes">
+<script type="text/javascript">
+var y=1;
+function adding_box() {
+	// body...
+	y++;
+	var text="<div class='Div_Box' id='D'" + y + "></div>";
+	
+	document.getElementById('target').innerHTML += text;
+	
+}
+</script>
+
+//আজকের ক্লাস 
+<div></div>
+<br><fieldset id="target_new">
+<legend>Boxes</legend>
+<div class="newBox" id="newBoxId" style="width: 100px;height:100px;"><br></div>
+height:100px<input type="range" min="100" max="300" id="hr" onchange="change_height()" />300px:<span id="h"></span>
+<br>Width:100px<input type="range" min="100" max="300" id="wr" onchange="change_width()" />300px:<span id="w"></span>
+	<br><input type="Button" value="Create Box" onclick="create()" name=""/><br>
+
+</div>
+</fieldset ></div>
+<script type="text/javascript">
+	var height,width;
+	function change_height(argument) {
+		var h=document.getElementById("hr").value
+		var t_h=document.getElementById("h")
+		t_h.innerHTML=h;
+		height=h;
+		// body...
+	}
+		var height,width;
+	function change_width(argument) {
+		var h=document.getElementById("wr").value
+		var t_h=document.getElementById("w")
+		t_h.innerHTML=h;
+		width=h;
+		// body...
+	}
+	function create() {
+		var DIV="<div class='newBox' id='newBoxId' style='height:"+height+"px; width:"+width+"px;'></div>"
+		document.getElementById('target_new').innerHTML +=DIV;
+		// body...
+	}
+</script>
+
+
+
+
+<label>User Name:</label><input type="text" name=""><br>
+<label>Password:</label><input id="showpass" type="Password" name="">
+<input onchange ="handleChange()" id="check" type="checkbox" value="show password"><label for="showpass">Show Password</label>
+
+
+<script type="text/javascript">
+	function handleChange() {
+       var checkbox=document.getElementById("check").checked;
+
+    if(checkbox==true){
+        
+      document.getElementById('showpass').setAttribute("type","text");
+        
+    }else{
+        document.getElementById('showpass').setAttribute("type","password");
+   }
+}
+</script>
+
+
+
+<script type="text/javascript">
+	var carName='Marcedes';
+document.getElementById('car').innerHTML=carName;
+
+</script>
+<p id="function"></p>
+<script type="text/javascript">
+	document.getElementById('function').innerHTML=sum(5,6);
+	
+</script>
+<p style="border: none">Celcius Converter</p><br>
+<p id="con" style="border: none;"></p>
+<script type="text/javascript">
+	document.getElementById('con').innerHTML=celsius_converter(80);
+
+</script>
+<p id="ob">dfgdg</p>
+<script type="text/javascript">
+	document.getElementById('ob').innerHTML=object();
+</script>
+<p>This is the output of ludu. Every time you reload, it changes.</p>
+<button id="ludu" type="button" onclick="ludu(1,7)">Ludu</button>
+<p id="date"></p>
+<script>
+var d = new Date();
+document.getElementById("date").innerHTML = d.toUTCString()   ;
+</script>
+<button id="day" onclick="today()">"2018-07-13"</button>
+<P id="list">list</P>
+<script>
+var fruits, text, fLen, i;
+	fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits_des = ["Banana", "Orange", "Apple", "Mango"];
+	fLen = fruits.length;
+	text = "<dl >";
+	for (i = 0; i < fLen; i++) {
+		text  +=  "<dt >"  + "<label style=color:red>"+fruits[i]+"</label>"  + "<label style=color:red;float:right;>"+fruits[i]+"</label>"  +"</dt>";
+		
+	}
+	text += "</dl>";
+	document.getElementById("list").innerHTML = text;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="div" onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+
+<p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
+
+<p>When the mouse is moved over the div, the p element will display the horizontal and vertical coordinates of your mouse pointer, whose values are returned from the clientX and clientY properties on the 
+MouseEvent object.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    var coor = "Coordinates: (" + x + "," + y + ")";
+    document.getElementById("demo").innerHTML = coor;
+}
+
+function clearCoor() {
+    document.getElementById("demo").innerHTML = "";
+}
+</script>
+<!--/*var text, i, fruits, flen;
+fruits = {"","","","",""};
+flen = fruits.length;
+text =<dl>
+for(i=0;i<flen;i++){
+	text += <dd>+fruits[i]+</dd>
+}
+
+
+text+=</dl>>-->

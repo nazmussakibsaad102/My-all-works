@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mine sweeper</title>
+	<style type="text/css">
+	input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+
+
+	}
+	.input{
+		width: 100%;
+	}
+	.point_is{
+		font-size: 50px;
+		float: left;
+	}
+	.table{
+		border: 1px solid black;
+		margin:0 auto;
+	}
+	.field{
+		width: 50%;
+		margin: 0 auto;
+	}
+	.field p{
+		font-size: 50px;
+		margin: 0 auto;
+		color: blue;
+		float: left;
+	}
+		.table_border{
+			border-color: 1px solid black;
+		}
+		.button{
+			background-image: url("hole.jpg");
+			height: 25px;
+			width: 60px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		.build{
+			width: 100%;
+		}
+	
+	</style>
+</head>
+<div class="field">
+<fieldset >
+	<legend>mineswiper</legend>
+	<label for="row">squares:</label><input onkeyup="update()" class="input" id="row" type="number" min="2" max="8" ><br>
+	
+	<input class="build" type="button" onclick="build(this)" name="" value="Build">
+	<span id="validity"></span>
+	<input class="build" type="button" onclick="reset(this)" name="" value="reset">
+</fieldset>
+<fieldset id="target">
+	<legend>Table</legend>
+	<div class="field" id="p1"></div>	
+ 
+</fieldset>
+<span class="point_is">Your point is:</span><p class="field" id="show">0</p><p id="over"></p>
+</div>
+<script >
+var points=0;
+
+		function reset(z){
+			location.reload();
+		}
+
+		function update(){
+
+			window.row=document.getElementById('row').value;
+			alert(row);
+						var  shv=Math.random()
+						alert(shv);
+			 window.rand1=Math.floor(Math.random()*(Math.pow(row,2)-1))+1;
+			  window.rand2=Math.floor(Math.random()*(Math.pow(row,2)-1))+1;
+			  window.rand3=Math.floor(Math.random()*(Math.pow(row,2)-1))+1;
+			  window.rand4=Math.floor(Math.random()*(Math.pow(row,2)-1))+1;
+			  window.rand5=Math.floor(Math.random()*(Math.pow(row,2)-1))+1;
+			  window.rand6=Math.floor(Math.random()*(Math.pow(row,2)-1))+1;
+			  window.rand7=Math.floor(Math.random()*(Math.pow(row,2)-1))+1;
+
+			  
+			  window.rand=[""+rand1+"",""+rand2+"",""+rand3+"",""+rand4+"",""+rand5+"",""+rand6+"",""+rand7+""];
+			  rand.sort(function(a, b){return a-b});
+			  alert(rand);
+			  //alert(rand);
+			  //alert(rand);
+
+		}
+
+
+	 function build(y) {
+		
+	 	y.disabled="disabled";
+	 	//location.reload();
+	 	var valid=document.getElementById('row');
+	  if (valid.checkValidity() == false) {
+        document.getElementById("validity").innerHTML = valid.validationMessage;
+    } else{
+	
+    	var x,y,z,d=0;
+    	i=0;
+    	j=0;
+    
+    	
+    	text="<table class='table' >";
+  
+    
+
+    	for(x=0;x<row;x++){
+    		var cls="a";
+    		 
+    		
+		text+="<tr class='"+cls+"'>";
+
+    		for(y=0;y<row;y++){
+    			var cell="";
+    		 d++;
+    			
+    			    			cell+="<td  >" +"<button class='button' onclick='blast(this)'  id="+d+"  ></button>"+"</td>";
+    	
+    			text+=cell;
+    			
+    		}
+    		text+="</tr>";
+    		
+    	
+    	}
+    	
+    	text+="</table>";
+    	
+    	
+    	document.getElementById('p1').innerHTML=text;
+
+    
+
+    	// body...
+    }
+    }
+
+
+
+
+    	function blast(c) {
+    		abc=c.id;
+    		//alert(abc);
+    		
+    		points+=1;
+    		var a=rand.indexOf(""+abc+"");
+    		//alert(a);
+    		
+    		if (a>= 0){
+
+    			//c.style.backgroundImage="url('blast.png')";
+    			alert("Sad, game over");
+    			for(var i = 1 ; i <= row * row; i++){
+    				document.getElementById(i).disabled='disabled';
+    			}
+    			for(var j = 0 ; j <= rand.length ; j ++){
+    				document.getElementById(rand[j]).style.backgroundImage="url('blast.png')";
+    				//alert(rand[j]);
+    			}
+    			
+    			
+    		}
+    		else {
+    				c.style.backgroundImage="url('points.png')";
+
+    				document.getElementById('show').innerHTML=points;
+    		c.disabled='disabled';
+
+    				
+
+    		}
+
+    		
+    			    				
+    			
+    		
+    	
+
+    		// body...
+    	}
+    	
+
+
+</script>
+<body>
+
+</body>
+</html>

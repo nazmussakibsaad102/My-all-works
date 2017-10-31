@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>for nayeem</title>
+</head>
+<body>
+Number of tags:<input type="number" id="p" name=""><br>
+<button onclick="build()">Build</button><br>
+<div id="show_p"></div>
+<p id="show_all" onclick="click_all()" ></p>
+<script type="text/javascript">
+var k;
+var clicked=[];
+	function build(){
+		var i,j,text;
+		k=document.getElementById('p').value;
+		alert(k);
+		
+		for(i=1;i<=k;i++){
+			var cell = " ";
+			alert(i);
+			cell+="<p onclick='save_click(this)' id="+i+">"+i+"<p>";
+			text+=cell;
+		}
+		document.getElementById("show_p").innerHTML=text;
+		document.getElementById("show_all").innerHTML="Click here to see all the clicks"
+	}
+	function save_click(x){
+
+		clicked.push(x.id);
+			}
+	 
+	 function click_all(){
+	 	alert(clicked);
+	 	
+	 		 }
+</script>
+
+
+
+</body>
+</html>

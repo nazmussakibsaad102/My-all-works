@@ -1,0 +1,72 @@
+.head{
+	
+	background-color: black;
+
+}
+
+.tmpl{
+	overflow: hidden;
+}
+.semi_head{
+		margin-top: 5px;
+	margin-right: 175px;
+	margin-left: 175px;
+	
+	
+	background-color: #191919;
+ 
+}
+.semi_semi_head{
+	
+	margin-right: 200px;
+	margin-left: 200px;
+	border-bottom: 2px solid #EEEEEE;
+	background-color: white;
+	height: 100px;
+
+
+
+}
+.title{
+	text-align: center;
+	font-style: italic;
+	 font-family:Georgia;
+	font-weight: 750;
+	width: 200p
+}
+.semi_second_head{
+	
+	margin-right: 200px;
+	margin-left: 200px;
+	border-bottom: 2px solid #EEEEEE;
+	background-color: white;
+	height: 125px;
+
+}
+
+
+
+.imag_saad{
+float: left; 
+width: 200px;
+
+
+}
+.img-circle{
+	border-radius: 50%;
+
+
+
+
+}
+.name{
+	float: left;
+	line-height: 0px;
+	font-weight: normal;
+}
+
+.addresses {
+  float: right;
+  line-height: 0px;
+  text-decoration: none;
+}

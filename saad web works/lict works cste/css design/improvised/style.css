@@ -1,0 +1,169 @@
+.div1{
+	background-color:#EDEDED;
+	width: 100%;
+	float: left;
+	position: fixed;
+	top:0;
+	/*opacity: .85;*/
+}
+body{margin:0;}
+	
+			.x{
+				  /*opacity: 0.85;*/
+				  position: relative;
+				  background-attachment: fixed;
+				  background-position: center;
+				  background-repeat: no-repeat;
+				  background-size: cover;
+			}
+			.Img1{background-image:url('saad1.jpg');height:100%;}
+			.Img2{background-image:url('saad2.jpg');height:200px;}
+			.Img3{background-image:url('saad3.jpeg');height:400px;;}
+			.Img4{background-image:url('saad4.jpg');height:100%;}
+			.Img4{background-image:url('saad5.jpg');height:100%;}
+			.Img4{background-image:url('saad6.jpg');height:100%;}
+			.Img4{background-image:url('saad7.jpg');height:100%;}
+			.Img4{background-image:url('saad8.jpg');height:100%;}
+			.Img4{background-image:url('saad9.jpg');height:100%;}
+			.Img4{background-image:url('saad10.jpg');height:100%;}
+.lnht{
+	line-height: 1px;
+}
+.name{
+	width: 100%;
+	float: left;
+}
+.position{
+	width:100%;
+	float: left;
+}
+.div2{
+	background-color:#F3F3F3;
+	width: 100%;
+	float: left;
+}
+.div3{
+	background-color:#F3F3F3;
+	width: 100%;
+	float: left;
+}
+.div4{
+	background-color:#F3F3F3;
+	width: 100%;
+	float: left;
+}
+.div5{
+	background-color: #F3F3F3;
+	width: 100%;
+	float: left;
+
+}
+.image{
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right:  5px;
+	margin-bottom:  5px;
+	float: left;
+	width: 7%;
+}
+.head1{
+	float: left;
+	width: 60%;
+}
+.img{
+	border-radius: 50%;
+	opacity: 1;
+}
+.head2{
+	float: left;
+	width: 20%;
+	line-height: 0px;
+	margin-top: 10px;
+}
+.personal_title{
+	float: left;
+	width: 20%;
+	font-style: italic;
+}
+.personal_description{
+	width: 80%;
+	float: left;
+}
+.work_title{
+	float: left;
+	width: 20%;
+}
+.work_description{
+	float: left;
+	width: 80%;
+}
+.key_title{
+	float: left;
+	width: 20%;
+}
+.key_description{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: left;
+	width: 80%;
+}
+.key_description1{
+	float: left;
+	width: 30%;
+}
+.key_description2{
+	float: left;
+	width: 30%;
+}
+.key_description2{
+	float: left;
+	
+}
+.border_bottom{
+	border-bottom: 2px solid #EDEDED;
+
+
+}
+.contact_title{
+	float: left;
+	width: 20%;
+}
+.contact_description{
+	float: left;
+	width: 80%;
+	
+}
+.contact_name{
+	width: 100%;
+}
+.contact_number{
+	width:100%;
+	float: left;
+}
+.email_name{
+	width: 100%;
+}
+.email_number{
+	width:100%;
+	float: left;
+}
+.message_name{
+	width: 100%;
+}
+.message_number{
+	width:100%;
+	float: left;
+}
+.submit{
+	float: left;
+}
+
+#parallex{
+	background-image: url(saad9.jpg);
+	height: 300px;
+	width: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}

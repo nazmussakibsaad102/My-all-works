@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+    .img{
+       width: 23px;
+       height: 20px;
+        background-image: url("img.jpg");
+    }
+		.table_border{
+			border-color: 1px solid black;
+		}
+		.a{background-color: gray;}
+		.b{background-color:yellow;}
+	</style>
+   <script type="text/javascript">
+   
+    function build() {
+    	var row,col,x,y,z;
+    	row=document.getElementById('row').value;
+    	col=document.getElementById('col').value;
+    	text="<table border=1 >";
+    	for(z=0;z<=col;z++){
+    		text+="<th>";
+    		text+="col"+z;
+
+    		text+="</th>";
+    			
+    		}
+
+
+    	for(x=0;x<=row;x++){
+    		var cls="";
+    		if(x%2==0){
+    			cls="a";
+    		}
+    		else{
+    			cls="b";
+    		}
+		text+="<tr class='"+cls+"'>";
+
+    		for(y=0;y<=col;y++){
+    			var cell="";
+    			
+
+    			cell+="<td >" + x+y+"</td>";
+
+    			text+=cell;
+    		}
+    		text+="</tr>";
+    	}
+    	text+="</table>";
+    	alert(text);
+    	document.getElementById('p1').innerHTML=text;
+
+    	// body...
+    }
+    
+    </script>
+</head>
+<body>
+<fieldset>
+	<legend>Table Format</legend>
+	<label>Row:</label><input id="row" type="number" name=""><br>
+	<label>Col:</label><input type="number" id="col" name=""><br>
+	<input type="button" onclick="build()" name="" value="Build">
+</fieldset><br>
+<fieldset id="target">
+	<legend>Table</legend>
+	<div id="p1"></div>	
+ 
+</fieldset>
+
+
+<fieldset>
+    <legend>Registration</legend>
+    <label>User Name </label><input id="user_name_input" onkeyup="show_mark()"  type="text"><img id="user_name" src=""><br>
+    
+    <label>Confirm Username</label>  <input id="user_name_input_confirm" onkeypress="check_user()" type="text"><p id="user_name_confirm"></p>
+    <label>Password</label><input id="pass"  type="Password"><button class="img" 
+    id="show_button"onmousedown="show_pass()" onmouseup="hide_pass()"></button><br>
+    <button onclick="registerd()">Register</button><br>
+    <button>Are you sure?</button><br>
+    <button>OK</button><button style="margin-left: 100px;">Cancel</button><br>
+    <button>Submitted</button><button style="margin-left: 100px">Not-Submitted</button>
+
+</fieldset>
+
+<script type="text/javascript">
+var x=0;
+    function show_mark() {
+       
+        var show=document.getElementById('user_name_input').value;
+        
+        if(show.length>8 && show.length<10){
+            
+            document.getElementById('user_name').setAttribute('src','check-right.png');
+        }
+        else{
+            document.getElementById('user_name').setAttribute('src','check-wrong.png');
+        }
+
+        // body...
+    }
+
+    function check_user() {
+        var chk=document.getElementById('user_name_input').value;
+        chk_con=document.getElementById('user_name_input_confirm').value;
+        if (chk==chk_con) {
+            document.getElementById('user_name_confirm').innerHTML="abc";
+        }
+        else{
+            document.getElementById('user_name_confirm').innerHTML="not abc";
+        }
+
+        // body...
+    }
+    function show_pass() {
+        document.getElementById('pass').setAttribute('type','text');
+        // body...
+    }
+    function hide_pass() {
+         document.getElementById('pass').setAttribute('type','password');
+        // body...
+    }
+    function registerd() {
+        if (true) {}
+        // body...
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
